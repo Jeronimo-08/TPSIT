@@ -6,14 +6,16 @@
 #include <sys/wait.h>
 
 
-int * func() {
-    int b = 5;
-    return &a;
+int * incrementa() {
+    int *p = malloc(sizeof(int));
+    *p = 10;
+    (*p)++;
+    return p;
     
 }
 
-void main() {
+int main() {
     int *c;
-    c = func();
+    c = incrementa();
     printf("Valore di c: %d\n", *c);    
 }
