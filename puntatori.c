@@ -6,17 +6,14 @@
 #include <sys/wait.h>
 
 
-void incrementa(int *a) {
-    (*a)++;
+int * func() {
+    int b = 5;
+    return &a;
+    
 }
 
-int main() {
-    int k = 0;
-    
-    incrementa(&k);
-    
-    printf("Valore di k: %d\n", valore);
-    
-    return 0;
-
+void main() {
+    int *c;
+    c = func();
+    printf("Valore di c: %d\n", *c);    
 }
